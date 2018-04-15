@@ -119,26 +119,26 @@ function cocolo_theme_hooks() {
 function cocolo_branding() {
 	if ( is_front_page() ) {
 	?>
-		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
-				<picture>
-					<source media="(min-width: 990px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg">
-					<source media="(min-width: 750px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo-small.svg">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
-				</picture>
-			</a>
-		</div>
+	<div class="site-branding">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
+			<picture>
+				<source media="(min-width: 990px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg">
+				<source media="(min-width: 750px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo-small.svg">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
+			</picture>
+		</a>
+	</div>
 	<?php
 	} else {
 	?>
-		<div class="small-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
-				<picture>
-					<source media="(min-width: 750px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo-small.svg">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
-				</picture>
-			</a>
-		</div>
+	<div class="small-branding">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
+			<picture>
+				<source media="(min-width: 750px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo-small.svg">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
+			</picture>
+		</a>
+	</div>
 	<?php
 	}
 }
