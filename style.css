@@ -365,6 +365,10 @@ button.start-booking-button {
   background-color: transparent;
 }
 
+#reasons {
+  background-color: #dddcd6;
+}
+
 /* AJAX search */
 
 input#dgwt-wcas-search {
@@ -393,10 +397,7 @@ button#vscf_send {
   #contact-form, #team, #reasons {
     padding: 5em 0;
   }
-  #reasons {
-    background-color: #dddcd6;
-  }
-  .site-main, .ul.products li.product {
+  .ul.products li.product {
     margin-bottom: 0;
     padding-bottom: 0;
   }
