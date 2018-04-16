@@ -33,6 +33,7 @@ function cocolo_contact_page_css() {
 	if ( $title == "Contact" ) {
 		?><style type="text/css">#primary{display:none;}.woocommerce-breadcrumb{margin-bottom: 0;}</style><?php
 	}
+
 }
 
 /*
