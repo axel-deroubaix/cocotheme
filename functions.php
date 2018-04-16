@@ -13,10 +13,10 @@
 /*
 ** Remove emojis
 */
- 
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 ); 
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' ); 
-remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 /*
@@ -27,9 +27,9 @@ add_action( 'wp_head', 'cocolo_contact_page_css' );
 
 function cocolo_contact_page_css() {
 	global $post;
-	
+
 	$title = get_the_title($post->ID);
-	
+
 	if ( $title == "Contact" ) {
 		?><style type="text/css">#primary{display:none;}.woocommerce-breadcrumb{margin-bottom: 0;}</style><?php
 	}
@@ -78,7 +78,7 @@ function cocolo_dequeue_storefront_font() {
  */
 
 add_action( 'after_setup_theme', 'cocolo_theme_hooks' );
- 
+
 function cocolo_theme_hooks() {
 
 	// Header
@@ -208,18 +208,18 @@ function cocolo_see_all_products_link() {
 	<?php
 }
 
-/* 
+/*
 ** log in and currency converter in main navigation
 */
 
 function cocolo_nav_menu_items($items, $args ) {
 	global $woocommerce;
-	
+
 	$user			=	wp_get_current_user();
 	$name			=	$user->display_name;
 	$cc				=	do_shortcode('[woocommerce_currency_converter currency_display="select"]');
 	$account_url	=	get_permalink( get_option('woocommerce_myaccount_page_id') );
-	
+
 	if ( isset( $args ) && $args->theme_location === 'primary' ) {
 	  	if( is_user_logged_in() ) {
 			$items	.=	'<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. $account_url .'" class="menu-item-logged-user">'. $name. '</a></li>';
@@ -228,8 +228,8 @@ function cocolo_nav_menu_items($items, $args ) {
 			$items	.=	'<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. $account_url .'" class="menu-item-sign-in">Sign In</a></li>';
 		}
 		//$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-currency-converter">' . $cc . '</li>';
-	}	
-	
+	}
+
 	return $items;
 }
 
@@ -258,46 +258,48 @@ function cocolo_scripts() {
 */
 
 function cocolo_team() {
-	?>
-	<div id="team" role="complementary">
-		<div class="col-full site-main">
-		<section class="team" aria-label="Meet the team">
-			<h2 class="section-title"><?php echo __( 'Meet the team', 'cocotheme' ); ?></h2>
-			<p>
-				<a href="<?php echo site_url( '/about/' ); ?>" class="more-link"><?php _e( 'About us', 'eyetheme') ?></a>
-			</p>
-			<div class="woocommerce columns-4">
-				<ul class="team-mates products columns-4">
-					<li class="team-mate product first">
-						<a href="<?php echo site_url( '/about/' ); ?>">
-						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-						</a>
-					</li>
-					<li class="team-mate product">
-						<a href="<?php echo site_url( '/about/' ); ?>">
-						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-						</a>
-					</li>
-					<li class="team-mate product">
-						<a href="<?php echo site_url( '/about/' ); ?>">
-						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-						</a>
-					</li>
-					<li class="team-mate product last">
-						<a href="<?php echo site_url( '/about/' ); ?>">
-						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-		</div>
-	</div>
-	<?php
+  if ( is_front_page() ) {
+	  ?>
+  	<div id="team" role="complementary">
+  		<div class="col-full site-main">
+  		<section class="team" aria-label="Meet the team">
+  			<h2 class="section-title"><?php echo __( 'Meet the team', 'cocotheme' ); ?></h2>
+  			<p>
+  				<a href="<?php echo site_url( '/about/' ); ?>" class="more-link"><?php _e( 'About us', 'eyetheme') ?></a>
+  			</p>
+  			<div class="woocommerce columns-4">
+  				<ul class="team-mates products columns-4">
+  					<li class="team-mate product first">
+  						<a href="<?php echo site_url( '/about/' ); ?>">
+  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+  						</a>
+  					</li>
+  					<li class="team-mate product">
+  						<a href="<?php echo site_url( '/about/' ); ?>">
+  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+  						</a>
+  					</li>
+  					<li class="team-mate product">
+  						<a href="<?php echo site_url( '/about/' ); ?>">
+  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+  						</a>
+  					</li>
+  					<li class="team-mate product last">
+  						<a href="<?php echo site_url( '/about/' ); ?>">
+  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+  						</a>
+  					</li>
+  				</ul>
+  			</div>
+  		</section>
+  		</div>
+  	</div>
+  	<?php
+  }
 }
 
 /*
@@ -314,7 +316,7 @@ function cocolo_contact() {
 				<p>
 					<?php _e( 'Do you have something special in mind? Email or call us at', 'cocotheme'); ?> <a href="tel:+81344057955">+81344057955</a>
 				</p>
-				<?php $from = do_shortcode('[contact]'); echo $from ?>	
+				<?php $from = do_shortcode('[contact]'); echo $from ?>
 			</div>
 		</section>
 		</div>
