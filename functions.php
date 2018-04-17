@@ -101,6 +101,17 @@ function cocolo_theme_hooks() {
 	add_action( 'storefront_before_footer', 'cocolo_clouds', 40 );
 	add_action( 'storefront_footer','cocolo_footer_branding', 20 );
 	add_action( 'wp_footer','cocolo_scripts' );
+	add_action( 'wp_footer','cocolo_font' );
+}
+
+/*
+** Cocolo Google Font
+*/
+
+function cocolo_font() {
+	?>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+	<?php
 }
 
 /*

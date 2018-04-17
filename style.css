@@ -32,6 +32,10 @@ h3:focus, a:focus, .focus a, .button:focus, .button.alt:focus, .button.added_to_
 
 /* Typography */
 
+body, button, input, textarea {
+  font-family: 'Raleway', sans-serif;
+}
+
 a {
   color: #ea5506;
 }
@@ -358,7 +362,7 @@ button.start-booking-button {
 /* Homepage */
 
 .section-title {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Playfair Display', serif;
   text-align: left !important;
   font-weight: 600;
   font-size: 2.5em;
@@ -473,7 +477,7 @@ button#vscf_send {
     padding: 5% 0 8%;
   }
   .site-description {
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Playfair Display', serif;
     font-size: 4em;
     color: #3E1E00 !important;
     line-height: 1.2em;
@@ -499,7 +503,7 @@ button#vscf_send {
     margin-top: -12em;
     width: 170px;
     right: 6%;
-    opacity: .5;
+    opacity: .7;
   }
   /* Homepage */
   #main .storefront-product-section:first-child {
