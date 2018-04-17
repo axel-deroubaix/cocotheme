@@ -307,7 +307,7 @@ function cocolo_contact() {
 				<p>
 					<?php _e( 'Do you have something special in mind? Email or call us at', 'cocotheme'); ?> <a href="tel:+81344057955">+81344057955</a>
 				</p>
-				<?php $from = do_shortcode('[contact]'); echo $from ?>
+				<?php $from = do_shortcode('[contact]'); echo $from; ?>
 			</div>
 		</section>
 		</div>

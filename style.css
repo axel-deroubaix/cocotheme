@@ -275,6 +275,15 @@ button.start-booking-button {
   background-color: #ea5506;
 }
 
+/* Order details */
+
+.wc-booking-summary {
+  border: 0;
+  color: #eee;
+  background: #3e1e00;
+  font-weight: 600;
+}
+
 /* Hero */
 
 #hero {
@@ -444,7 +453,7 @@ button#vscf_send {
   .main-navigation ul li a:hover, main-navigation ul li:hover>a, .site-title a:hover, a.cart-contents:hover, .site-header-cart .widget_shopping_cart a:hover, .site-header-cart:hover>li>a, .site-header ul.menu li.current-menu-item>a {
     color: #ea5506;
   }
-  .menu-item-logged-user::after {
+  .menu-item-logged-user::after, .menu-item-sign-in::after {
     font-family: FontAwesome;
     content: "\f2bd";
     padding-left: .5em;
@@ -655,5 +664,11 @@ button#vscf_send {
   }
   .section-title {
     margin-bottom: 0.2em;
+  }
+  /* Footer */
+  .widget_nav_menu ul li {
+    width: 25%;
+    margin-bottom: 2em;
+    float: left;
   }
 }
