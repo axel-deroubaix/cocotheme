@@ -153,7 +153,7 @@ function cocolo_header_search() {
 */
 
 function cocolo_hero() {
-    if ( is_front_page() ) {
+	if ( is_front_page() ) {
 	?>
 	<div id="hero" class="site-hero" role="complementary">
 		<div class="col-full">
@@ -212,7 +212,7 @@ function cocolo_nav_menu_items($items, $args ) {
 	$account_url	=	get_permalink( get_option('woocommerce_myaccount_page_id') );
 
 	if ( isset( $args ) && $args->theme_location === 'primary' ) {
-	  	if( is_user_logged_in() ) {
+  	if( is_user_logged_in() ) {
 			$items	.=	'<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. $account_url .'" class="menu-item-logged-user">'. $name. '</a></li>';
 		}
 		else {
@@ -355,11 +355,11 @@ function cocolo_why() {
 			<div>
 				<h3>It's more than travel it's your story</h3>
 				<h4>Human & personal</h4>
-				<p>Experience [story, human touch & personal service (no app, no algoryhtm)]</p>
+				<p>( No app,  )</p>
 				<h4>Unique & elegant</h4>
-				<p>Lack of unicity [world is the same , small over big]</p>
+				<p>All our services are crafted following our standards.</p>
 				<h4>Simple & curated</h4>
-				<p>Too many choices too complicated [simplicity, curated]</p>
+				<p>Are you overwhelmed by the abundance of choice? Not sure what is worth your time? We make it easy for you.</p>
 			</div>
 		</section>
 		</div>
