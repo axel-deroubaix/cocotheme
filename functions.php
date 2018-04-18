@@ -110,7 +110,7 @@ function cocolo_theme_hooks() {
 
 function cocolo_font() {
 	?>
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300" rel="stylesheet">
 	<?php
 }
 

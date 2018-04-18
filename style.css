@@ -33,7 +33,7 @@ h3:focus, a:focus, .focus a, .button:focus, .button.alt:focus, .button.added_to_
 /* Typography */
 
 body, button, input, textarea {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -410,7 +410,7 @@ button#vscf_send {
   #contact-form, #team, #reasons {
     padding: 5em 0;
   }
-  .ul.products li.product {
+  ul.products li.product {
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -442,7 +442,7 @@ button#vscf_send {
     width: 75%;
   }
   .woocommerce-active .site-header .main-navigation {
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     float: right;
   }
@@ -538,34 +538,34 @@ button#vscf_send {
   .cloud1 {
     z-index: -1;
     /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-    -webkit-animation: move 10s linear 16s infinite;
-    -moz-animation: move 10s linear 16s infinite;
-    -o-animation: move 10s linear 16s infinite;
-    animation: move 10s linear 16s infinite;
+    -webkit-animation: move 10s linear infinite;
+    -moz-animation: move 10s linear infinite;
+    -o-animation: move 10s linear infinite;
+    animation: move 10s linear infinite;
   }
   .cloud2 {
     z-index: -2;
     margin-top: 5em;
-    -webkit-animation: move 15s linear 8s infinite;
-    -moz-animation: move 15s linear 8s infinite;
-    -o-animation: move 15 linear 8s infinite;
-    animation: move 15s linear 8s infinite;
+    -webkit-animation: move 15s linear  infinite;
+    -moz-animation: move 15s linear  infinite;
+    -o-animation: move 15 linear  infinite;
+    animation: move 15s linear  infinite;
   }
   .cloud3 {
     z-index: -3;
     margin-top: 8em;
-    -webkit-animation: move 20s linear 4s infinite;
-    -moz-animation: move 20s linear 4s infinite;
-    -o-animation: move 20s linear 4s infinite;
-    animation: move 20s linear 4s infinite;
+    -webkit-animation: move 20s linear infinite;
+    -moz-animation: move 20s linear  infinite;
+    -o-animation: move 20s linear  infinite;
+    animation: move 20s linear  infinite;
   }
   .cloud4 {
     z-index: -4;
     margin-top: 3em;
-    -webkit-animation: move 25s linear 16s infinite;
-    -moz-animation: move 25s linear 16s infinite;
-    -o-animation: move 25s linear 16s infinite;
-    animation: move 25s linear 16s infinite;
+    -webkit-animation: move 25s linear infinite;
+    -moz-animation: move 25s linear infinite;
+    -o-animation: move 25s linear infinite;
+    animation: move 25s linear infinite;
   }
   .cloud5 {
     z-index: -5;
@@ -576,10 +576,10 @@ button#vscf_send {
   }
   @-webkit-keyframes move {
     from {
-      -webkit-transform: translateX(-500px);
+      -webkit-transform: translateX(-1000px);
     }
     to {
-      -webkit-transform: translateX(1350px);
+      -webkit-transform: translateX(3000px);
     }
   }
 }
@@ -610,6 +610,7 @@ button#vscf_send {
     opacity: .9;
   }
   .site-description {
+    font-family: 'Playfair Display', serif;
     color: #3E1E00 !important;
     font-size: 2em;
     line-height: 1.2em;
@@ -617,6 +618,7 @@ button#vscf_send {
     margin: 0;
     z-index: 2;
     position: relative;
+    margin-bottom: 0.5em;
   }
   .sub-description {
     z-index: 2;
