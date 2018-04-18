@@ -33,7 +33,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 	printf(
 		wp_kses(
 			/* translators: %1s item is the name of the site, %2s is a html link */
-			__( 'An order has been created for you on %1$s. %2$s', 'woocommerce' ),
+			__( 'A booking has been created for you on %1$s. %2$s', 'woocommerce' ),
 			array(
 				'a' => array(
 					'href' => array(),

@@ -45,7 +45,7 @@ function cocolo_adsense() {
 }
 
 /*
-** Change wooommerce image size
+** Change image sizes
 */
 
 add_filter( 'storefront_woocommerce_args', 'cocolo_storefront_woocommerce_args' );
