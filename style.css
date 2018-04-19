@@ -365,7 +365,8 @@ button.start-booking-button {
   font-family: 'Playfair Display', serif;
   text-align: left !important;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 2em;
+  margin-bottom: .5em;
 }
 
 .dgwt-wcas-search-wrapp {
@@ -474,7 +475,7 @@ button#vscf_send {
   }
   /* Hero */
   .hero {
-    padding: 5% 0 8%;
+    padding: 5% 0 7%;
   }
   .site-description {
     font-family: 'Playfair Display', serif;
@@ -507,7 +508,7 @@ button#vscf_send {
   }
   /* Homepage */
   #main .storefront-product-section:first-child {
-    margin-top: 2em;
+    margin-top: 4em;
   }
   /* Products */
   .storefront-full-width-content.single-product div.product .woocommerce-product-gallery {
