@@ -188,12 +188,12 @@ function cocolo_hero() {
 
 function cocolo_featured( $args ) {
 	$args = array(
-		'limit' 			=> 100,
-		'columns' 			=> 3,
+		'limit' 						=> 100,
+		'columns' 					=> 3,
 		'child_categories' 	=> 0,
-		'orderby' 			=> 'rand',
-		'order'				=> 'ASC',
-		'title'				=> __( 'Featured', 'cocotheme' ),
+		'orderby' 					=> 'rand',
+		'order'							=> 'ASC',
+		'title'							=> __( 'Featured', 'cocotheme' ),
 	);
 	return $args;
 }
@@ -217,9 +217,9 @@ function cocolo_see_all_products_link() {
 function cocolo_nav_menu_items($items, $args ) {
 	global $woocommerce;
 
-	$user			=	wp_get_current_user();
-	$name			=	$user->display_name;
-	$cc				=	do_shortcode('[woocommerce_currency_converter currency_display="select"]');
+	$user					=	wp_get_current_user();
+	$name					=	$user->display_name;
+	$cc						=	do_shortcode('[woocommerce_currency_converter currency_display="select"]');
 	$account_url	=	get_permalink( get_option('woocommerce_myaccount_page_id') );
 
 	if ( isset( $args ) && $args->theme_location === 'primary' ) {
@@ -242,7 +242,7 @@ function cocolo_nav_menu_items($items, $args ) {
 function cocolo_scripts() {
 	global $product;
 
-	if ( is_wc_booking_product( $product ) ) {
+	if ( is_wc_booking_product( $product ) ) { //script to toggle the check Availability button
 	?>
 	<script>
 	jQuery(document).ready(function () {

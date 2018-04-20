@@ -24,9 +24,7 @@ section.woocommerce-customer-details, ul.woocommerce-order-overview.woocommerce-
   display: none;
 }
 
-h1:focus,
-h2:focus,
-h3:focus, a:focus, .focus a, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.wc-forward:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, select.currency_switcher.select:focus {
+*:focus {
   outline: none !important;
 }
 
@@ -54,12 +52,8 @@ p a:hover {
   margin-bottom: 1em;
 }
 
-.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
-  background-color: #86ABA5;
-}
-
-.woocommerce-error {
-  background-color: #DB5A6B;
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments, .woocommerce-error {
+  background-color: #ea5506;
 }
 
 /* Tables */
@@ -226,7 +220,6 @@ table.ui-datepicker-calendar {
 
 .wc-bookings-booking-form .wc-bookings-booking-cost {
   background: #76974d !important;
-  /* yanagiiro*/
   color: #fff;
   margin: 0 .1px;
 }
@@ -366,7 +359,6 @@ button.start-booking-button {
   text-align: left !important;
   font-weight: 600;
   font-size: 2em;
-  margin-bottom: .5em;
 }
 
 .dgwt-wcas-search-wrapp {
@@ -600,7 +592,7 @@ button#vscf_send {
   /* Header */
   .site-header .custom-logo-link img, .site-header .site-logo-anchor img, .site-header .site-logo-link img {
     width: 90%;
-    margin-top: .5em;
+    margin-top: 10px  ;
   }
   /* Hero */
   .hero {
@@ -613,7 +605,7 @@ button#vscf_send {
   .site-description {
     font-family: 'Playfair Display', serif;
     color: #3E1E00 !important;
-    font-size: 2em;
+    font-size: 2.5em;
     line-height: 1.2em;
     font-weight: 600;
     margin: 0;
@@ -670,7 +662,7 @@ button#vscf_send {
     margin-top: 1.5em;
   }
   .section-title {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.2em !important;
   }
   /* Footer */
   .widget_nav_menu ul li {
