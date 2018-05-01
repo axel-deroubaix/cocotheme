@@ -112,7 +112,7 @@ button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover,
   background-color: #fff;
 }
 
-.dgwt-wcas-sf-wrapp input[type="search"].dgwt-wcas-search-input {
+.dgwt-wcas-sf-wrapp {
   border: 1px solid #3E1E00;
   border-radius: 4px;
   -moz-border-radius: 4px;
