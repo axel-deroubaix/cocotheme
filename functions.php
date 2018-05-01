@@ -273,25 +273,25 @@ function cocolo_team() {
   				<ul class="team-mates products columns-4">
   					<li class="team-mate product first">
   						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
   						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
   						</a>
   					</li>
   					<li class="team-mate product">
   						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/pierre.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
+  						<h3><?php _e( 'Pierre', 'cocotheme'); ?></h3>
   						</a>
   					</li>
   					<li class="team-mate product">
   						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
   						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
   						</a>
   					</li>
   					<li class="team-mate product last">
   						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="http://dev.cocolotravel.com/wp-content/uploads/axel-300x300.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
   						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
   						</a>
   					</li>
