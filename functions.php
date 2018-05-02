@@ -271,10 +271,16 @@ function cocolo_team() {
   			</p>
   			<div class="woocommerce columns-4">
   				<ul class="team-mates products columns-4">
-  					<li class="team-mate product first">
+						<li class="team-mate product first">
   						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
-  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/maki.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<h3><?php _e( 'Maki', 'cocotheme'); ?></h3>
+  						</a>
+  					</li>
+  					<li class="team-mate product">
+  						<a href="<?php echo site_url( '/about/' ); ?>">
+  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/aiko.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+  						<h3><?php _e( 'Aiko', 'cocotheme'); ?></h3>
   						</a>
   					</li>
   					<li class="team-mate product">
@@ -283,18 +289,12 @@ function cocolo_team() {
   						<h3><?php _e( 'Pierre', 'cocotheme'); ?></h3>
   						</a>
   					</li>
-  					<li class="team-mate product">
-  						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-  						</a>
-  					</li>
-  					<li class="team-mate product last">
-  						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-  						<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-  						</a>
-  					</li>
+						<li class="team-mate product last">
+							<a href="<?php echo site_url( '/about/' ); ?>">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
+							<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+							</a>
+						</li>
   				</ul>
   			</div>
   		</section>

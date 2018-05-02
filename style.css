@@ -165,6 +165,7 @@ form.cart {
 
 h1.product_title.entry-title {
   font-weight: 600;
+  font-size: 2em;
 }
 
 /*
@@ -208,20 +209,6 @@ fieldset.wc-bookings-date-picker.wc-bookings-date-picker-booking.wc_bookings_fie
 
 .wc-bookings-booking-form fieldset input {
   width: 100%;
-}
-
-.wc-bookings-booking-form .block-picker li a.selected, .wc-bookings-booking-form .block-picker li:nth-child(odd) a:focus, .wc-bookings-booking-form .block-picker li:nth-child(odd) a:hover {
-  background: #76974d !important;
-}
-
-table.ui-datepicker-calendar {
-  border: 0;
-}
-
-.wc-bookings-booking-form .wc-bookings-booking-cost {
-  background: #76974d !important;
-  color: #fff;
-  margin: 0 .1px;
 }
 
 div.product-addon {
@@ -295,6 +282,7 @@ button.start-booking-button {
 
 .team img {
   border-radius: 50% 50% 50% 0;
+  border: 2px solid #3e1e00;
 }
 
 /* Checkout */
@@ -499,6 +487,9 @@ button#vscf_send {
     opacity: .7;
   }
   /* Homepage */
+  .site-main {
+    padding-top: 0 !important;
+  }
   #main .storefront-product-section:first-child {
     margin-top: 4em;
   }
@@ -525,7 +516,6 @@ button#vscf_send {
   /* Contact form */
   #contact-area {
     width: 55%;
-    margin: 0 auto;
   }
   /* Footer */
   .cloud1 {
