@@ -271,18 +271,21 @@ button.start-booking-button {
 /* Hero */
 
 #hero {
-  background-color: #dddcd6;
+  background-color: #17184b;;
   background-image: url(http://dev.cocolotravel.com/wp-content/themes/cocotheme/img/wave1.svg);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: auto 75%;
 }
 
+.hero {
+  color: #ffffff;
+}
+
 /* Team */
 
 .team img {
   border-radius: 50% 50% 50% 0;
-  border: 2px solid #3e1e00;
 }
 
 /* Checkout */
@@ -311,7 +314,8 @@ button.start-booking-button {
 
 .site-footer {
   color: #3E1E00;
-  background-color: inherit;
+  background-color: transparent;
+  border-top: 1px solid #f0f0f0;
 }
 
 .widget_nav_menu ul li:before {
@@ -359,10 +363,6 @@ button.start-booking-button {
   background-color: transparent;
 }
 
-#reasons {
-  background-color: #dddcd6;
-}
-
 /* AJAX search */
 
 input#dgwt-wcas-search {
@@ -372,7 +372,7 @@ input#dgwt-wcas-search {
 /* Contact form */
 
 #contact-form {
-  background-color: #dddcd6;
+  background-color: #f5f5f5;
 }
 
 button#vscf_send {
@@ -388,7 +388,7 @@ button#vscf_send {
 **********************************/
 
 @media only screen and (min-width: 768px) {
-  #contact-form, #team, #reasons {
+  #contact-form {
     padding: 5em 0;
   }
   ul.products li.product {
@@ -457,15 +457,14 @@ button#vscf_send {
   .hero {
     padding: 5% 0 7%;
   }
-  .site-description {
+  .hero-title {
     font-family: 'Playfair Display', serif;
     font-size: 4em;
-    color: #3E1E00 !important;
     line-height: 1.2em;
     font-weight: 600;
     margin: 0;
   }
-  .sub-description {
+  .hero-subtitle {
     font-size: 1.5em;
     margin: 0 0 1em;
   }
@@ -520,42 +519,44 @@ button#vscf_send {
   /* Footer */
   .cloud1 {
     z-index: -1;
+    margin-top: 2em;
     /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-    -webkit-animation: move 10s linear infinite;
-    -moz-animation: move 10s linear infinite;
-    -o-animation: move 10s linear infinite;
-    animation: move 10s linear infinite;
+    -webkit-animation: move 13s linear infinite;
+    -moz-animation: move 13s linear infinite;
+    -o-animation: move 13s linear infinite;
+    animation: move 13s linear infinite;
   }
   .cloud2 {
     z-index: -2;
     margin-top: 5em;
-    -webkit-animation: move 15s linear  infinite;
-    -moz-animation: move 15s linear  infinite;
-    -o-animation: move 15 linear  infinite;
-    animation: move 15s linear  infinite;
+    -webkit-animation: move 16s linear  infinite;
+    -moz-animation: move 16s linear  infinite;
+    -o-animation: move 16 linear  infinite;
+    animation: move 16s linear  infinite;
   }
   .cloud3 {
     z-index: -3;
     margin-top: 8em;
-    -webkit-animation: move 20s linear infinite;
-    -moz-animation: move 20s linear  infinite;
-    -o-animation: move 20s linear  infinite;
-    animation: move 20s linear  infinite;
+    -webkit-animation: move 22s linear infinite;
+    -moz-animation: move 22s linear  infinite;
+    -o-animation: move 22s linear  infinite;
+    animation: move 22s linear  infinite;
   }
   .cloud4 {
     z-index: -4;
     margin-top: 3em;
-    -webkit-animation: move 25s linear infinite;
-    -moz-animation: move 25s linear infinite;
-    -o-animation: move 25s linear infinite;
-    animation: move 25s linear infinite;
+    -webkit-animation: move 19s linear infinite;
+    -moz-animation: move 19s linear infinite;
+    -o-animation: move 19s linear infinite;
+    animation: move 19s linear infinite;
   }
   .cloud5 {
     z-index: -5;
-    -webkit-animation: move 30s linear infinite backwards;
-    -moz-animation: move 30s linear infinite backwards;
-    -o-animation: move 30s linear infinite backwards;
-    animation: move 30s linear infinite backwards;
+    margin-top: 1em;
+    -webkit-animation: move 25s linear infinite backwards;
+    -moz-animation: move 25s linear infinite backwards;
+    -o-animation: move 25s linear infinite backwards;
+    animation: move 25s linear infinite backwards;
   }
   @-webkit-keyframes move {
     from {
@@ -592,9 +593,8 @@ button#vscf_send {
     width: 90%;
     opacity: .9;
   }
-  .site-description {
+  .hero-title {
     font-family: 'Playfair Display', serif;
-    color: #3E1E00 !important;
     font-size: 2.5em;
     line-height: 1.2em;
     font-weight: 600;
@@ -603,7 +603,7 @@ button#vscf_send {
     position: relative;
     margin-bottom: 0.5em;
   }
-  .sub-description {
+  .hero-subtitle {
     z-index: 2;
     position: relative;
   }

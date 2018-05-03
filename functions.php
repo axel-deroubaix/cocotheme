@@ -89,14 +89,20 @@ function cocolo_theme_hooks() {
 	remove_action( 'homepage', 'storefront_popular_products', 50 );
 	remove_action( 'homepage', 'storefront_on_sale_products', 60 );
 	remove_action( 'homepage', 'storefront_best_selling_products', 70 );
-	add_action( 'storefront_homepage_after_featured_products_title', 'cocolo_see_all_products_link' );
+	//add_action( 'storefront_homepage_after_featured_products_title', 'cocolo_see_all_products_link' );
 	add_filter( 'storefront_featured_products_args', 'cocolo_featured' );
+
+
+	// Why page
+	add_action( 'storefront_before_footer', 'cocolo_why', 10 );
+
+	// About page
+	add_action( 'aboutpage', 'cocolo_team', 10 );
+	add_action( 'aboutpage', 'cocolo_office', 20 );
 
 	// Footer
 	remove_action( 'storefront_footer', 'storefront_credit', 20 );
 	remove_action( 'storefront_footer', 'storefront_handheld_footer_bar', 999 );
-	add_action( 'storefront_before_footer', 'cocolo_why', 10 );
-	add_action( 'storefront_before_footer', 'cocolo_team', 20 );
 	add_action( 'storefront_before_footer', 'cocolo_contact', 30 );
 	add_action( 'storefront_before_footer', 'cocolo_clouds', 40 );
 	add_action( 'storefront_footer','cocolo_footer_branding', 20 );
@@ -169,10 +175,10 @@ function cocolo_hero() {
 	<div id="hero" class="site-hero" role="complementary">
 		<div class="col-full">
 			<div class="hero">
-				<p class="site-description"><?php _e( 'Create your Japan story', 'cocotheme') ?></p>
-				<p class="sub-description"><?php _e( 'Book our curated experiences and become the storyteller of your travel', 'cocotheme') ?></p>
+				<p class="hero-title"><?php _e( 'Create your Japan story', 'cocotheme') ?></p>
+				<p class="hero-subtitle"><?php _e( 'Book our curated experiences and be the storyteller of your travel', 'cocotheme') ?></p>
 				<?php echo do_shortcode( '[wcas-search-form]' );?>
-				<p class="sub-description" style="margin: 1em 0 0 0;"><a href="#reasons">Why travel with us?</a></p>
+				<p class="hero-subtitle" style="margin: 1em 0 0 0;"><a href="<?php echo site_url( '/about/' ); ?>"><?php _e( 'Why travel with us?', 'cocotheme'); ?></a></p>
 				<div id="koi1" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi1.svg);"></div>
 				<div id="koi2" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi2.svg);"></div>
 			</div>
@@ -260,48 +266,43 @@ function cocolo_scripts() {
 */
 
 function cocolo_team() {
-  if ( is_front_page() ) {
-	  ?>
-  	<div id="team" role="complementary">
-  		<div class="col-full site-main">
-  		<section class="team" aria-label="Meet the team">
-  			<h2 class="section-title"><?php echo __( 'Meet the team', 'cocotheme' ); ?></h2>
-  			<p>
-  				<a href="<?php echo site_url( '/about/' ); ?>" class="more-link"><?php _e( 'About us', 'eyetheme') ?></a>
-  			</p>
-  			<div class="woocommerce columns-4">
-  				<ul class="team-mates products columns-4">
-						<li class="team-mate product first">
-  						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/maki.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-  						<h3><?php _e( 'Maki', 'cocotheme'); ?></h3>
-  						</a>
-  					</li>
-  					<li class="team-mate product">
-  						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/aiko.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
-  						<h3><?php _e( 'Aiko', 'cocotheme'); ?></h3>
-  						</a>
-  					</li>
-  					<li class="team-mate product">
-  						<a href="<?php echo site_url( '/about/' ); ?>">
-  						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/pierre.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
-  						<h3><?php _e( 'Pierre', 'cocotheme'); ?></h3>
-  						</a>
-  					</li>
-						<li class="team-mate product last">
-							<a href="<?php echo site_url( '/about/' ); ?>">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
-							<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
-							</a>
-						</li>
-  				</ul>
-  			</div>
-  		</section>
-  		</div>
-  	</div>
-  	<?php
-  }
+  ?>
+	<section id="team" class="team storefront-product-section" aria-label="Meet the team">
+		<h2 class="section-title"><?php echo __( 'Meet the team', 'cocotheme' ); ?></h2>
+		<div class="woocommerce columns-4">
+			<ul class="team-mates products columns-4">
+				<li class="team-mate product first">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/maki.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+					<h3><?php _e( 'Maki', 'cocotheme'); ?></h3>
+				</li>
+				<li class="team-mate product">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/aiko.jpg" alt="" width="300" height="300" class="alignnone size-medium wp-image-243" />
+					<h3><?php _e( 'Aiko', 'cocotheme'); ?></h3>
+				</li>
+				<li class="team-mate product">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/pierre.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
+					<h3><?php _e( 'Pierre', 'cocotheme'); ?></h3>
+				</li>
+				<li class="team-mate product last">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="" width="300" height="300" class="alignnone size-medium" />
+					<h3><?php _e( 'Axel', 'cocotheme'); ?></h3>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<?php
+}
+
+/*
+** Office template
+*/
+
+function cocolo_office() {
+  ?>
+	<section id="office" class="office storefront-product-section" aria-label="The office">
+		<h2 class="section-title"><?php echo __( 'Our office', 'cocotheme' ); ?></h2>
+	</section>
+	<?php
 }
 
 /*
@@ -309,6 +310,11 @@ function cocolo_team() {
 */
 
 function cocolo_contact() {
+	global $post;
+
+	$title = get_the_title($post->ID);
+
+	if ( $title == "Contact" ) {
 	?>
 	<div id="contact-form" role="contact">
 		<div class="col-full">
@@ -324,6 +330,7 @@ function cocolo_contact() {
 		</div>
 	</div>
 	<?php
+	}
 }
 
 /*
@@ -357,20 +364,54 @@ function cocolo_footer_branding() {
 */
 
 function cocolo_why() {
-    if ( is_front_page() ) {
+	global $post;
+
+	$title = get_the_title($post->ID);
+
+	if ( $title == "Why" ) {
 	?>
 	<div id="reasons" role="complementary">
-		<div class="col-full">
 		<section class="reasons" aria-label="Why travel with Cocolo?">
-			<h2 class="section-title"><?php echo __( 'Why travel with Cocolo?', 'cocotheme' ); ?></h2>
-			<div>
-				<h3>It's more than travel it's your story</h3>
-				<h4>Human & personal</h4>
-				<p>( No app,  )</p>
-				<h4>Unique & elegant</h4>
-				<p>All our services are crafted following our standards.</p>
-				<h4>Simple & curated</h4>
-				<p>Are you overwhelmed by the abundance of choice? Not sure what is worth your time? We make it easy for you.</p>
+			<div style="clear:both;padding:0 0 5em 0;">
+				<div class="col-full">
+					<h1 class="hero-title" style="text-align:center;"><?php echo __( 'Why travel with Cocolo?', 'cocotheme' ); ?></h1>
+				</div>
+			</div>
+			<div style="clear:both;padding:5em 0;background-color: #f5f5f5;">
+				<div class="col-full">
+					<div style="width:50%;float:right;">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why1.svg" alt="why1" style="float:right;">
+					</div>
+					<div style="width:50%;float:left;">
+						<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Slow travel — No tourist burnout', 'cocotheme'); ?></h2>
+						<p><?php _e( 'Have you ever come home from a vacation feeling more exhausted than you were before you left? Have you ever felt like you had no time to get to know the area and its people enough?', 'cocotheme'); ?></p>
+						<blockquote><?php _e( '"All traveling becomes dull in exact proportion to its rapidity." ―John Ruskin', 'cocotheme'); ?></blockquote>
+					</div>
+				</div>
+			</div>
+			<div style="clear:both;padding:5em 0;">
+				<div class="col-full">
+					<div style="width:50%;float:left;">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why2.svg" alt="why2">
+					</div>
+					<div style="width:50%;float:right;">
+						<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Curated — No planning headache', 'cocotheme'); ?></h2>
+						<p><?php _e( 'Are you overwhelmed by the abundance of choice? Not sure what is worth your time? We make it easy for you.', 'cocotheme'); ?></p>
+						<blockquote><?php _e( '"All journeys have secret destination of which the traveler is unaware." ―Martin Buber ', 'cocotheme'); ?></blockquote>
+					</div>
+				</div>
+			</div>
+			<div style="clear:both;padding:5em 0;background-color: #f5f5f5;">
+				<div class="col-full">
+					<div style="width:50%;float:right;">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why3.svg" alt="why3" style="float:right;">
+					</div>
+					<div style="width:50%;float:left;">
+						<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'People centered — Meet new friends', 'cocotheme'); ?></h2>
+						<p><?php _e( 'Are you overwhelmed by the abundance of choice? Not sure what is worth your time? We make it easy for you.', 'cocotheme'); ?></p>
+						<blockquote><?php _e( '"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes" ―Marcel Proust', 'cocotheme'); ?></blockquote>
+					</div>
+				</div>
 			</div>
 		</section>
 		</div>
