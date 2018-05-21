@@ -3,7 +3,6 @@
 /*
 ** Remove emojis
 */
-
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -12,7 +11,6 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 /*
 ** Contact page css
 */
-
 add_action( 'wp_head', 'cocolo_contact_page_css' );
 
 function cocolo_contact_page_css() {
@@ -29,7 +27,6 @@ function cocolo_contact_page_css() {
 /*
 ** Google adsense
 */
-
 add_action( 'wp_head', 'cocolo_adsense', 999 );
 
 function cocolo_adsense() {
@@ -47,12 +44,11 @@ function cocolo_adsense() {
 /*
 ** Change image sizes
 */
-
 add_filter( 'storefront_woocommerce_args', 'cocolo_storefront_woocommerce_args' );
 
 function cocolo_storefront_woocommerce_args( $args ) {
-    $args['single_image_width'] = 640;
-    return $args;
+  $args['single_image_width'] = 640;
+  return $args;
 }
 
 /*
@@ -67,7 +63,6 @@ function cocolo_dequeue_storefront_font() {
 /**
  * Load theme tweaks
  */
-
 add_action( 'after_setup_theme', 'cocolo_theme_hooks' );
 
 function cocolo_theme_hooks() {
@@ -76,8 +71,12 @@ function cocolo_theme_hooks() {
 	remove_action( 'storefront_header', 'storefront_site_branding', 20 );
 	remove_action( 'storefront_header', 'storefront_secondary_navigation', 30 );
 	remove_action( 'storefront_header', 'storefront_product_search', 40 );
+	remove_action( 'storefront_header', 'storefront_primary_navigation_wrapper', 42 );
+	remove_action( 'storefront_header', 'storefront_primary_navigation', 50 );
 	remove_action( 'storefront_header', 'storefront_header_cart', 60 );
+	remove_action( 'storefront_header', 'storefront_primary_navigation_wrapper_close', 68 );
 	add_action( 'storefront_header', 'cocolo_branding', 20 );
+	add_action( 'storefront_header', 'storefront_primary_navigation', 40 );
 	//add_action( 'storefront_header', 'cocolo_header_search', 20 );
 	add_action( 'storefront_before_content', 'cocolo_hero', 5 );
 	add_filter( 'wp_nav_menu_items', 'cocolo_nav_menu_items', 10, 2);
@@ -92,13 +91,13 @@ function cocolo_theme_hooks() {
 	//add_action( 'storefront_homepage_after_featured_products_title', 'cocolo_see_all_products_link' );
 	add_filter( 'storefront_featured_products_args', 'cocolo_featured' );
 
-	// Why page
+	// Why and about page
 	add_action( 'storefront_before_footer', 'cocolo_why', 10 );
-
-	// About page
 	add_action( 'storefront_before_footer', 'cocolo_team', 10 );
 	add_action( 'storefront_before_footer', 'cocolo_office', 20 );
 	add_action( 'storefront_before_footer', 'cocolo_company_data', 30 );
+	add_action( 'storefront_before_footer', 'cocolo_booknow', 40 );
+
 
 	// Footer
 	remove_action( 'storefront_footer', 'storefront_credit', 20 );
@@ -131,9 +130,9 @@ function cocolo_branding_with_search() {
 	<div class="site-branding">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
 			<picture>
-				<source media="(min-width: 990px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg">
+				<source media="(min-width: 990px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo.svg">
 				<source media="(min-width: 750px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo-small.svg">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo.svg" alt="Logo">
 			</picture>
 		</a>
 	</div>
@@ -144,7 +143,7 @@ function cocolo_branding_with_search() {
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
 			<picture>
 				<source media="(min-width: 750px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo-small.svg">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo.svg" alt="Logo">
 			</picture>
 		</a>
 	</div>
@@ -155,9 +154,11 @@ function cocolo_branding_with_search() {
 function cocolo_branding() {
 	?>
 	<div class="site-branding">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Logo">
-		</a>
+		<h1 class="logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo.svg" alt="Logo">
+			</a>
+		</h1>
 	</div>
 	<?php
 }
@@ -167,13 +168,13 @@ function cocolo_branding() {
 */
 
 function cocolo_header_search() {
-    if ( !is_front_page() ) {
-	?>
-    <div class="header-search not-in-mobile">
-		<?php echo do_shortcode( '[wcas-search-form]' );?>
-	</div>
-	<?php
-    }
+  if ( !is_front_page() ) {
+		?>
+	  <div class="header-search not-in-mobile">
+			<?php echo do_shortcode( '[wcas-search-form]' );?>
+		</div>
+		<?php
+  }
 }
 
 /*
@@ -182,21 +183,21 @@ function cocolo_header_search() {
 
 function cocolo_hero() {
 	if ( is_front_page() ) {
-	?>
-	<div id="hero" class="site-hero" role="complementary">
-		<div class="col-full">
-			<div class="hero">
-				<p class="hero-title"><?php _e( 'Create your Japan story', 'cocotheme') ?></p>
-				<p class="hero-subtitle"><?php _e( 'Book our curated experiences and be the storyteller of your travel', 'cocotheme') ?></p>
-				<?php //echo do_shortcode( '[wcas-search-form]' );?>
-				<p class="hero-subtitle"><a href="<?php echo site_url( '/why/' ); ?>"><?php _e( 'Why travel with us?', 'cocotheme'); ?></a></p>
-				<div id="koi1" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi1.svg);"></div>
-				<div id="koi2" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi2.svg);"></div>
+		?>
+		<div id="hero" class="site-hero" role="complementary">
+			<div class="col-full">
+				<div class="hero">
+					<p class="hero-title"><?php _e( 'Create your Japan story', 'cocotheme') ?></p>
+					<p class="hero-subtitle"><?php _e( 'Book our curated experiences and be the storyteller of your travel', 'cocotheme') ?></p>
+					<?php //echo do_shortcode( '[wcas-search-form]' );?>
+					<p class="hero-subtitle"><a href="<?php echo site_url( '/why/' ); ?>"><?php _e( 'Why travel with us?', 'cocotheme'); ?></a></p>
+					<div id="koi1" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi1.svg);"></div>
+					<div id="koi2" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi2.svg);"></div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<?php
-    }
+		<?php
+  }
 }
 
 /*
@@ -221,9 +222,9 @@ function cocolo_featured( $args ) {
 
 function cocolo_see_all_products_link() {
 	?>
-    <p>
-      <a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>" class="more-link"><?php _e( 'See everything', 'eyetheme') ?></a>
-    </p>
+  <p>
+    <a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>" class="more-link"><?php _e( 'See everything', 'eyetheme') ?></a>
+  </p>
 	<?php
 }
 
@@ -260,15 +261,15 @@ function cocolo_scripts() {
 	global $product;
 
 	if ( is_wc_booking_product( $product ) ) { //script to toggle the check Availability button
-	?>
-	<script>
-	jQuery(document).ready(function () {
-		jQuery(".start-booking-button").click(function () {
-			jQuery('.cart').slideToggle("slow");
+		?>
+		<script>
+		jQuery(document).ready(function () {
+			jQuery(".start-booking-button").click(function () {
+				jQuery('.cart').slideToggle("slow");
+			});
 		});
-	});
-	</script>
-	<?php
+		</script>
+		<?php
 	}
 }
 
@@ -286,7 +287,7 @@ function cocolo_team() {
 		<div style="padding:0 0 5em 0;">
 			<div class="col-full">
 				<h1 class="hero-title" style="text-align:center;"><?php echo __( 'Cocolo means heart', 'cocotheme' ); ?></h1>
-				<p class="hero-subtitle" style="text-align:center;"><?php _e( 'We have a profound love for Japan and are 100% true to it. We only sell Japan and are based here.', 'cocotheme') ?></p>
+				<p class="hero-subtitle" style="text-align:center;"><?php _e( 'We love Japan and are 100% true to it. We only sell Japan and are based here.', 'cocotheme') ?></p>
 			</div>
 		</div>
 		<div style="background-color: #f5f5f5;">
@@ -434,21 +435,21 @@ function cocolo_contact() {
 	$title = get_the_title($post->ID);
 
 	if ( $title == "Contact" ) {
-	?>
-	<div id="contact-form" role="contact">
-		<div class="col-full">
-		<section class="contact-area section" aria-label="Contact">
-			<div id="contact-area">
-				<h2 class="section-title"><?php echo __( 'Get in touch', 'cocotheme' ); ?></h2>
-				<p>
-					<?php _e( 'Do you have something special in mind? Email or call us at', 'cocotheme'); ?> <a href="tel:+81344057955">+81344057955</a>
-				</p>
-				<?php $from = do_shortcode('[contact]'); echo $from; ?>
+		?>
+		<div id="contact-form" role="contact">
+			<div class="col-full">
+				<section class="contact-area section" aria-label="Contact">
+					<div id="contact-area">
+						<h2 class="section-title"><?php echo __( 'Get in touch', 'cocotheme' ); ?></h2>
+						<p>
+						<?php _e( 'Do you have something special in mind? Email or call us at', 'cocotheme'); ?> <a href="tel:+81344057955">+81344057955</a>
+						</p>
+						<?php $from = do_shortcode('[contact]'); echo $from; ?>
+					</div>
+				</section>
 			</div>
-		</section>
 		</div>
-	</div>
-	<?php
+		<?php
 	}
 }
 
@@ -474,7 +475,7 @@ function cocolo_clouds() {
 
 function cocolo_footer_branding() {
 	?>
-	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolotravel-logo.svg" alt="Cocolo logo" class="footer-branding">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cocolo-logo.svg" alt="Cocolo logo" class="footer-branding"></a>
 	<?php
 }
 
@@ -488,63 +489,76 @@ function cocolo_why() {
 	$title = get_the_title($post->ID);
 
 	if ( $title == "Why" ) {
-	?>
-	<div id="reasons" role="complementary">
-		<section class="reasons" aria-label="Why travel with Cocolo?">
-			<div style="clear:both;padding:0 0 5em 0;">
-				<div class="col-full">
+		?>
+		<div id="reasons" role="complementary">
+			<section aria-label="Why travel with Cocolo?">
+				<div class="col-full" style="padding:0 0 5em 0;">
 					<h1 class="hero-title" style="text-align:center;"><?php echo __( 'Original experiences in Japan', 'cocotheme' ); ?></h1>
-					<p class="hero-subtitle" style="text-align:center;"><?php _e( 'We craft and curate original, non-mass-market travel experiences in Japan', 'cocotheme') ?></p>
+					<p class="hero-subtitle" style="text-align:center;"><?php _e( 'Curated, non-mass-market travel experiences in Japan', 'cocotheme') ?></p>
 				</div>
-			</div>
-			<div style="clear:both;padding:5em 0;background-color: #f5f5f5;">
-				<div class="col-full">
-					<div style="width:50%;float:right;">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why1.svg" alt="why1" style="float:right;">
-					</div>
-					<div style="width:50%;float:left;">
-						<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Slow travel — No tourist burnout', 'cocotheme'); ?></h2>
-						<p><?php _e( 'Have you ever come home from a vacation feeling more exhausted than you were before you left? Have you ever felt like you had no time to get to know the area enough?', 'cocotheme'); ?></p>
-						<p><?php _e( 'We take a slow approach to travel and favor quality time over quantity of places visited. Take time to discover Japan.', 'cocotheme'); ?></p>
-						<blockquote><?php _e( '"All traveling becomes dull in exact proportion to its rapidity." ―John Ruskin', 'cocotheme'); ?></blockquote>
-					</div>
-				</div>
-			</div>
-			<div style="clear:both;padding:5em 0;">
-				<div class="col-full">
-					<div style="width:50%;float:left;">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why2.svg" alt="why2">
-					</div>
-					<div style="width:50%;float:right;">
-						<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Curated — No planning headache', 'cocotheme'); ?></h2>
-						<p><?php _e( 'Are you overwhelmed by the abundance of choice? Not sure what is worth your time?', 'cocotheme'); ?></p>
-						<p><?php _e( 'We make it easy for you selecting only the experiences in Japan that match our standards: exclusive, memorable and elegant', 'cocotheme'); ?></p>
-						<blockquote><?php _e( '"All journeys have secret destination of which the traveler is unaware." ―Martin Buber ', 'cocotheme'); ?></blockquote>
+				<div class="reasons off-color">
+					<div class="col-full">
+						<span class="reason-right">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why1.svg" alt="why1" style="float:right;">
+						</span>
+						<span class="reason-left">
+							<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Slow travel — No tourist burnout', 'cocotheme'); ?></h2>
+							<p><?php _e( 'Have you ever come home from a vacation feeling more exhausted than you were before you left? Have you ever felt like you had no time to get to know the area enough?', 'cocotheme'); ?></p>
+							<p><?php _e( 'We take a slow approach to travel and favor quality time over quantity of places visited. Take time to discover Japan with us.', 'cocotheme'); ?></p>
+							<blockquote><?php _e( '"All traveling becomes dull in exact proportion to its rapidity." ―John Ruskin', 'cocotheme'); ?></blockquote>
+						</span>
 					</div>
 				</div>
-			</div>
-			<div style="clear:both;padding:5em 0;background-color: #f5f5f5;">
-				<div class="col-full">
-					<div style="width:50%;float:right;">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why3.svg" alt="why3" style="float:right;">
-					</div>
-					<div style="width:50%;float:left;">
-						<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'People centered — Meet new friends', 'cocotheme'); ?></h2>
-						<p><?php _e( 'Have you ever stayed somewhere yet never connected with the people around. Do you want a deeper meaning to your travel than just ticking a places-to-go list?', 'cocotheme'); ?></p>
-						<p><?php _e( 'We\'ve got you covered! Human interaction is at the center of our selection process.' , 'cocotheme'); ?></p>
-						<blockquote><?php _e( '"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes" ―Marcel Proust', 'cocotheme'); ?></blockquote>
+				<div class="reasons">
+					<div class="col-full">
+						<span class="reason-left">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why2.svg" alt="why2">
+						</span>
+						<span class="reason-right">
+							<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Curated — No planning headache', 'cocotheme'); ?></h2>
+							<p><?php _e( 'Are you overwhelmed by the abundance of choice? Not sure what is worth your time?', 'cocotheme'); ?></p>
+							<p><?php _e( 'We make it easy for you selecting only the experiences in Japan that match our standards: exclusive, memorable and elegant', 'cocotheme'); ?></p>
+							<blockquote><?php _e( '"All journeys have secret destination of which the traveler is unaware." ―Martin Buber ', 'cocotheme'); ?></blockquote>
+						</span>
 					</div>
 				</div>
-			</div>
-			<div style="padding:5em 0 3em 0;background-color: #17184b;">
-				<div class="col-full" style="text-align:center;color:#ffffff;">
+				<div class="reasons off-color">
+					<div class="col-full">
+						<span class="reason-right">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why3.svg" alt="why3" style="float:right;">
+						</span>
+						<span class="reason-left">
+							<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'People centered — Meet new friends', 'cocotheme'); ?></h2>
+							<p><?php _e( 'Have you ever stayed somewhere yet never connected with the people around? Do you want a deeper meaning to your travel than just ticking a places-to-go list?', 'cocotheme'); ?></p>
+							<p><?php _e( 'We\'ve got you covered! Human interaction is at the center of our selection process.' , 'cocotheme'); ?></p>
+							<blockquote><?php _e( '"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes" ―Marcel Proust', 'cocotheme'); ?></blockquote>
+						</span>
+					</div>
+				</div>
+			</section>
+		</div>
+		<?php
+	}
+}
+
+/*
+** Book now section
+*/
+
+function cocolo_booknow() {
+	global $post;
+
+	$title = get_the_title($post->ID);
+
+	if ( $title == "Why" || $title == "About" ) {
+		?>
+		<div id="booknow" role="complementary">
+			<section class="booknow col-full" style="padding:5em 0 3em 0;text-align:center;color:#ffffff;" aria-label="Book now">
 				<p class="hero-subtitle">
-					<a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><?php _e( 'Book now', 'eyetheme') ?></a>
+				<a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><?php _e( 'Book now', 'eyetheme') ?></a>
 				</p>
-				</div>
-			</div>
-		</section>
-	</div>
-	<?php
+			</section>
+		</div>
+		<?php
 	}
 }
