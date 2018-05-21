@@ -18,7 +18,7 @@ Tags:         	Cocolo
 
 /* Useless stuff */
 
-.variation-Guide, .variation-BookingType, section.woocommerce-customer-details, ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details, .order-again, .woocommerce-additional-fields, .page .entry-header h1.entry-title, .woocommerce-products-header__title page-title, table.cart td.actions, .avatar, .storefront-sorting, .woocommerce-products-header, .add_to_cart_button, .storefront-full-width-content .woocommerce-products-header, .storefront-full-width-content.woocommerce-account .entry-header, .storefront-full-width-content.woocommerce-cart .entry-header, .storefront-full-width-content.woocommerce-checkout .entry-header {
+.variation-Guide, .variation-BookingType, section.woocommerce-customer-details, ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details, .order-again, .woocommerce-additional-fields, .page .entry-header h1.entry-title, .woocommerce-products-header__title page-title, .avatar, .storefront-sorting, .woocommerce-products-header, .add_to_cart_button, .storefront-full-width-content .woocommerce-products-header, .storefront-full-width-content.woocommerce-account .entry-header, .storefront-full-width-content.woocommerce-cart .entry-header, .storefront-full-width-content.woocommerce-checkout .entry-header {
   display: none;
 }
 
@@ -82,6 +82,10 @@ table th, table td, table tbody td, table.cart tr:first-child td.product-remove,
 
 table.cart td.product-remove, table.cart td.actions {
   border-top-color: #eee;
+}
+
+table.cart td.actions {
+  border-top: 0;
 }
 
 /* Currency */
@@ -258,6 +262,15 @@ button.start-booking-button {
 
 #wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker table {
   border: 0;
+}
+
+#wc-bookings-booking-form .block-picker li a {
+  background-color: #77cd38;
+  color: #ffffff;
+}
+.wc-bookings-booking-form .block-picker li a.selected {
+  background: #4fa510 !important;
+  color: #fff!important;
 }
 
 /* Order details */
@@ -510,6 +523,10 @@ button#vscf_send {
   }
   .storefront-full-width-content.single-product #reviews .commentlist li .comment_container .comment-text {
     width: 100%;
+  }
+  .single-product div.product p.price {
+    margin: 1.41575em 0 0 0;
+    font-weight: bold;
   }
   /* Why page */
   .reasons {

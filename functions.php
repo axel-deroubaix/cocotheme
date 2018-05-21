@@ -95,7 +95,7 @@ function cocolo_theme_hooks() {
 	add_action( 'storefront_before_footer', 'cocolo_why', 10 );
 	add_action( 'storefront_before_footer', 'cocolo_team', 10 );
 	add_action( 'storefront_before_footer', 'cocolo_office', 20 );
-	add_action( 'storefront_before_footer', 'cocolo_company_data', 30 );
+	//add_action( 'storefront_before_footer', 'cocolo_company_data', 30 );
 	add_action( 'storefront_before_footer', 'cocolo_booknow', 40 );
 
 
@@ -260,7 +260,7 @@ function cocolo_nav_menu_items($items, $args ) {
 function cocolo_scripts() {
 	global $product;
 
-	if ( is_wc_booking_product( $product ) ) { //script to toggle the check Availability button
+	if ( is_product( $product ) ) { //script to toggle the check Availability button
 		?>
 		<script>
 		jQuery(document).ready(function () {
