@@ -24,7 +24,7 @@ if ( $cross_sells ) : ?>
 
 	<div class="cross-sells">
 
-		<h2><?php _e( 'Why can add&hellip;', 'woocommerce' ) ?></h2>
+		<h2><?php _e( 'You can add&hellip;', 'woocommerce' ) ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 

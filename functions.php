@@ -211,7 +211,7 @@ function cocolo_featured( $args ) {
 		'child_categories' 	=> 0,
 		'orderby' 					=> 'rand',
 		'order'							=> 'ASC',
-		'title'							=> __( 'Featured', 'cocotheme' ),
+		'title'							=> __( 'Experiences', 'cocotheme' ),
 	);
 	return $args;
 }
@@ -362,7 +362,7 @@ function cocolo_company_data() {
 						<tbody>
 							<tr>
 								<td>
-									<p><?php _e( 'Company Name', 'cocotheme'); ?></p>
+									<p><?php _e( 'Corporate name', 'cocotheme'); ?></p>
 								</td>
 								<td>
 									<p><?php _e( 'Cocolo Travel Llc.', 'cocotheme'); ?></p>
@@ -370,50 +370,62 @@ function cocolo_company_data() {
 							</tr>
 							<tr>
 								<td>
-									<p></p>
+									<p><?php _e( 'Purpose', 'cocotheme'); ?></p>
 								</td>
 								<td>
-									<p></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p></p>
-								</td>
-								<td>
-									<p></p>
+									<p>
+										<?php _e( 'Consulting and booking for travel agencies', 'cocotheme'); ?>
+										<?php _e( 'Travel related staff training', 'cocotheme'); ?>
+										<?php _e( 'All other activities incidental or related to each of the above', 'cocotheme'); ?>
+									</p>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<p></p>
+									<p><?php _e( 'Head office', 'cocotheme'); ?></p>
 								</td>
 								<td>
-									<p></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p></p>
-								</td>
-								<td>
-									<p></p>
+									<p><?php _e( 'Nakagin Capsule Tower, 8-16-10 Ginza Chuo Tokyo, 104-0061 Japan', 'cocotheme'); ?></p>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<p></p>
+									<p><?php _e( 'Founded', 'cocotheme'); ?></p>
 								</td>
 								<td>
-									<p></p>
+									<p><?php _e( 'February 28, 2017', 'cocotheme'); ?></p>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<p></p>
+									<p><?php _e( 'Capital', 'cocotheme'); ?></p>
 								</td>
 								<td>
-									<p></p>
+									<p><?php _e( 'JPY 3,000,000', 'cocotheme'); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><?php _e( 'Staff', 'cocotheme'); ?></p>
+								</td>
+								<td>
+									<p><?php _e( '3 full-time, 1 part-time', 'cocotheme'); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><?php _e( 'Board members', 'cocotheme'); ?></p>
+								</td>
+								<td>
+									<p><?php _e( 'Axel Deroubaix, Maki Deroubaix', 'cocotheme'); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p><?php _e( 'Travel agency licence', 'cocotheme'); ?></p>
+								</td>
+								<td>
+									<p><?php _e( '', 'cocotheme'); ?></p>
 								</td>
 							</tr>
 						</tbody>
