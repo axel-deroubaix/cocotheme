@@ -189,7 +189,7 @@ form.cart {
 }
 
 .shop_attributes {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .star-rating span:before, .quantity .plus, .quantity .minus, p.stars a:hover:after, p.stars a:after, .star-rating span:before, #payment .payment_methods li input[type=radio]:first-child:checked+label:before {
@@ -373,6 +373,7 @@ button.start-booking-button {
   position: absolute;
   margin-top: .5em;
   opacity: 0.3;
+  z-index: -1;
 }
 
 .footer-branding {
@@ -661,6 +662,9 @@ button#vscf_send {
     font-size: 1.5em;
   }
   /* Products */
+  .single-product div.product .images, .single-product div.product .summary, .single-product div.product .woocommerce-product-gallery {
+    margin-bottom: 0;
+  }
   .single-product div.product p.price {
     font-size: 1em;
   }
@@ -693,8 +697,11 @@ button#vscf_send {
     margin-bottom: 0.2em !important;
   }
   /* Footer */
+  .site-footer {
+    padding: 0;
+  }
   .widget_nav_menu ul li {
-    width: 25%;
+    width: 50%;
     margin-bottom: 2em;
     float: left;
   }
