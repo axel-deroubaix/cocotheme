@@ -268,6 +268,11 @@ function cocolo_scripts() {
 				jQuery('.cart').slideToggle("slow");
 			});
 		});
+		jQuery(document).ready(function () {
+		    jQuery(".addon-checkbox").click(function () {
+		        jQuery('.product-addon-hotel-name').slideToggle("slow");
+		    });
+		});
 		</script>
 		<?php
 	}

@@ -285,9 +285,14 @@ button.start-booking-button {
   background-color: #77cd38;
   color: #ffffff;
 }
+
 .wc-bookings-booking-form .block-picker li a.selected {
   background: #4fa510 !important;
   color: #fff!important;
+}
+
+.product-addon-hotel-name {
+  display: none;
 }
 
 /* Order details */
