@@ -628,6 +628,7 @@ button#vscf_send {
   /* Header */
   .site-header .custom-logo-link img, .site-header .site-logo-anchor img, .site-header .site-logo-link img {
     margin-top: 6px;
+    width: 175px
   }
   button.menu-toggle {
     font-size: .7em;
