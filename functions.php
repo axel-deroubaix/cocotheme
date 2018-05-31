@@ -481,7 +481,7 @@ function cocolo_clouds() {
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/kumo1.svg" alt="Cloud 1" class="clouds cloud2 not-in-mobile">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/kumo1.svg" alt="Cloud 1" class="clouds cloud3 not-in-mobile">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/kumo2.svg" alt="Cloud 2" class="clouds cloud4 not-in-mobile">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/kumo3.svg" alt="Cloud 3" class="clouds cloud5">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/kumo3.svg" alt="Cloud 3" class="clouds cloud5 not-in-mobile">
 	</div>
 	<?php
 }

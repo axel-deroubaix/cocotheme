@@ -374,13 +374,6 @@ button.start-booking-button {
   color: #ea5506;
 }
 
-.clouds {
-  position: absolute;
-  margin-top: .5em;
-  opacity: 0.3;
-  z-index: -1;
-}
-
 .footer-branding {
   margin: 0 auto;
 }
@@ -560,6 +553,12 @@ button#vscf_send {
     width: 55%;
   }
   /* Footer */
+  .clouds {
+    position: absolute;
+    margin-top: .5em;
+    opacity: 0.3;
+    z-index: -1;
+  }
   .cloud1 {
     z-index: -1;
     margin-top: 2em;
@@ -703,7 +702,17 @@ button#vscf_send {
   }
   /* Footer */
   .site-footer {
-    padding: 0;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(222,197,156,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(222,197,156,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(222,197,156,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(222,197,156,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(222,197,156,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(222,197,156,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dec59c',GradientType=0 );
+  }
+  #clouds {
+    margin: 0 1em;
   }
   .widget_nav_menu ul li {
     width: 50%;
