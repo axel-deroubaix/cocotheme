@@ -187,8 +187,8 @@ function cocolo_hero() {
 		<div id="hero" class="site-hero" role="complementary">
 			<div class="col-full">
 				<div class="hero">
-					<p class="hero-title"><?php _e( 'Create your Japan story', 'cocotheme') ?></p>
-					<p class="hero-subtitle"><?php _e( 'Book our curated experiences and be the storyteller of your travel', 'cocotheme') ?></p>
+					<p class="hero-title"><?php _e( 'The Art of Travel', 'cocotheme') ?></p>
+					<p class="hero-subtitle"><?php _e( 'Book original tours and experiences in Japan.', 'cocotheme') ?></p>
 					<?php //echo do_shortcode( '[wcas-search-form]' );?>
 					<p class="hero-subtitle"><a href="<?php echo site_url( '/why/' ); ?>"><?php _e( 'Why travel with us?', 'cocotheme'); ?></a></p>
 					<div id="koi1" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi1.svg);"></div>
