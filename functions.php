@@ -8,22 +8,6 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-/*
-** Contact page css
-*/
-add_action( 'wp_head', 'cocolo_contact_page_css' );
-
-function cocolo_contact_page_css() {
-	global $post;
-
-	$title = get_the_title($post->ID);
-
-	if ( $title == "Contact" ) {
-		?><style type="text/css">#primary{display:none;}.woocommerce-breadcrumb{margin-bottom: 0;}</style><?php
-	}
-
-}
-
 /* Google adsense and Tag manager*/
 add_action( 'wp_head', 'cocolo_tag_manager_header', 1);
 add_action( 'storefront_before_site', 'cocolo_tag_manager_body', 1);
@@ -81,6 +65,22 @@ function cocolo_dequeue_storefront_font() {
 	wp_dequeue_style('storefront-fonts');
 }
 
+/*
+** Contact page css
+*/
+add_action( 'wp_head', 'cocolo_contact_page_css' );
+
+function cocolo_contact_page_css() {
+	global $post;
+
+	$title = get_the_title($post->ID);
+
+	if ( $title == "Contact" ) {
+		?><style type="text/css">#primary{display:none;}.woocommerce-breadcrumb{margin-bottom: 0;}</style><?php
+	}
+
+}
+
 /**
  * Load theme tweaks
  */
@@ -116,7 +116,7 @@ function cocolo_theme_hooks() {
 	add_action( 'storefront_before_footer', 'cocolo_why', 10 );
 	add_action( 'storefront_before_footer', 'cocolo_team', 10 );
 	add_action( 'storefront_before_footer', 'cocolo_office', 20 );
-	//add_action( 'storefront_before_footer', 'cocolo_company_data', 30 );
+	add_action( 'storefront_before_footer', 'cocolo_company_data', 30 );
 	add_action( 'storefront_before_footer', 'cocolo_booknow', 40 );
 
 
@@ -209,9 +209,9 @@ function cocolo_hero() {
 			<div class="col-full">
 				<div class="hero">
 					<p class="hero-title"><?php _e( 'The Art of Travel', 'cocotheme') ?></p>
-					<p class="hero-subtitle"><?php _e( 'Book original tours and experiences in Japan.', 'cocotheme') ?></p>
+					<p class="hero-subtitle"><?php _e( 'We help you plan original tours and experiences in Japan', 'cocotheme') ?></p>
 					<?php //echo do_shortcode( '[wcas-search-form]' );?>
-					<p class="hero-subtitle"><a href="<?php echo site_url( '/why/' ); ?>"><?php _e( 'Why travel with us?', 'cocotheme'); ?></a></p>
+					<p class="hero-subtitle"><?php _e( 'Let\'s start planning together!', 'cocotheme'); ?></a> <a href="<?php echo site_url( '/contact/' ); ?>"><?php _e( 'Get in touch', 'cocotheme'); ?></a></p>
 					<div id="koi1" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi1.svg);"></div>
 					<div id="koi2" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi2.svg);"></div>
 				</div>
@@ -400,8 +400,8 @@ function cocolo_company_data() {
 								</td>
 								<td>
 									<p>
-										<?php _e( 'Consulting and booking for travel agencies', 'cocotheme'); ?>
-										<?php _e( 'Travel related staff training', 'cocotheme'); ?>
+										<?php _e( 'Consulting and booking for travel agencies', 'cocotheme'); ?><br>
+										<?php _e( 'Travel related staff training', 'cocotheme'); ?><br>
 										<?php _e( 'All other activities incidental or related to each of the above', 'cocotheme'); ?>
 									</p>
 								</td>
@@ -451,7 +451,7 @@ function cocolo_company_data() {
 									<p><?php _e( 'Travel agency licence', 'cocotheme'); ?></p>
 								</td>
 								<td>
-									<p><?php _e( '', 'cocotheme'); ?></p>
+									<p><?php _e( '20071', 'cocotheme'); ?></p>
 								</td>
 							</tr>
 						</tbody>
