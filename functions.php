@@ -76,7 +76,7 @@ function cocolo_contact_page_css() {
 	$title = get_the_title($post->ID);
 
 	if ( $title == "Contact" ) {
-		?><style type="text/css">#primary{display:none;}.woocommerce-breadcrumb{margin-bottom: 0;}</style><?php
+		?><style type="text/css">#primary{display:none;}.storefront-breadcrumb{margin-bottom:0;}</style><?php
 	}
 
 }
@@ -211,7 +211,7 @@ function cocolo_hero() {
 					<p class="hero-title"><?php _e( 'The Art of Travel', 'cocotheme') ?></p>
 					<p class="hero-subtitle"><?php _e( 'We help you plan original tours and experiences in Japan', 'cocotheme') ?></p>
 					<?php //echo do_shortcode( '[wcas-search-form]' );?>
-					<p class="hero-subtitle"><?php _e( 'Let\'s start planning together!', 'cocotheme'); ?></a> <a href="<?php echo site_url( '/contact/' ); ?>"><?php _e( 'Get in touch', 'cocotheme'); ?></a></p>
+					<p class="hero-subtitle"><a href="<?php echo site_url( '/contact/' ); ?>"><?php _e( 'Let\'s start planning together: get in touch!', 'cocotheme'); ?></a></p>
 					<div id="koi1" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi1.svg);"></div>
 					<div id="koi2" class="kois" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/img/koi2.svg);"></div>
 				</div>
