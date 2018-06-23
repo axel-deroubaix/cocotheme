@@ -378,7 +378,7 @@ function cocolo_office() {
 
 	if ( $title == "About" ) {
 		?>
-		<div style="background:#fff0db;">
+		<div style="background:#f5f5f5;">
 			<div class="col-full">
 				<section id="office" class="office section" aria-label="The office">
 					<h2 class="section-title"><?php echo __( 'Our office — Nakagin Capsule Tower', 'cocotheme' ); ?></h2>
