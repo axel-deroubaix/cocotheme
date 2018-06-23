@@ -329,7 +329,7 @@ function cocolo_team() {
 							</figure>
 						</div>
 						<div class="column-content column-speech">
-							<p class="speech"><?php _e( 'Born and raised in Tokyo, my first travel on my own at the age of 5 was visiting my grandma in a tropical  island by small prop plane. It was a unforgettable experience which became my source of passion for traveling and lead me keep discovering the world later in my life. By backpacking from the east to the west in my 20’s, I ended up living and working as a designer in New York where I met my husband. now I feel so fortunate to share our passion of traveling and introduce my country which I rediscovered  it’s rich history and culture. fresh Sushi makes me happy, and walking in the hidden garden of Kyoto gives me a great deal of inspiration.', 'cocotheme'); ?></p>
+							<p class="speech"><?php _e( 'Born and raised in Tokyo, I first traveled on my own at the age of 5 when I visited my grandma’s house. She lived ona Japanese tropical island in the Pacific ocean. It was my first time flying a propeller plane. For the little girl I was, this memorable experience sparked my lifelong passion for travel and my thirst for discovery. I started backpacking from the east to the west in my 20’s and I landed in New York working as a designer. There, I later met my husband. Now, I feel so fortunate to be able share our passion for traveling and introduce my country. I since rediscovered Japan’s rich history and culture. Fresh sushi makes me happy, and strolling in the secluded gardens of Kyoto give me a great deal of inspiration.', 'cocotheme'); ?></p>
 						</div>
 					</div>
 					<div class="cocolo-columns">
