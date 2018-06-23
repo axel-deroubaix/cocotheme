@@ -319,7 +319,40 @@ button.start-booking-button {
 /* Team */
 
 .team img {
-  border-radius: 50% 50% 50% 0;
+  border-radius: 50%;
+}
+
+.cocolo-columns {
+    display: inline-block;
+}
+
+.column-content {
+    display: inline-block;
+	overflow: visible;
+	position: relative;
+    margin: 1em 1%;
+	vertical-align: middle;
+}
+
+.cocolo-caption-text {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    color: #222;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0 0.5em 0 1em;
+    position: absolute;
+    left: -.5em;
+    bottom: 30%;
+    transform: rotate(-3deg);
+    transition: all .1s ease-in-out;
+}
+
+.speech {
+	background: #fff;
+	margin: 0;
+	padding: 1em;
+	border-radius: .4em;
 }
 
 /* Checkout */
@@ -385,6 +418,7 @@ button.start-booking-button {
   text-align: left !important;
   font-weight: 600;
   font-size: 2em;
+  text-transform: capitalize;
 }
 
 .dgwt-wcas-search-wrapp {
@@ -606,6 +640,34 @@ button#vscf_send {
       -webkit-transform: translateX(2000px);
     }
   }
+  /* Team */
+	.column-content {
+		max-width: 22%;
+	}
+	.column-speech {
+		max-width: 73%;
+	}
+	.speech:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #fff;
+	border-left: 0;
+	margin-top: -20px;
+	margin-left: -20px;
+	}
+
+	/* About Page*/
+	.content-office {
+		max-width: 33%;
+	}
+	.content-map {
+		max-width: 63%;
+	}
 }
 
 /*********************************
@@ -719,4 +781,18 @@ button#vscf_send {
     margin-bottom: 2em;
     float: left;
   }
+  /* Team */
+  	.speech:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 22px solid transparent;
+		border-bottom-color: #fff;
+		border-top: 0;
+		margin-left: -22px;
+		margin-top: -22px;
+	}
 }
