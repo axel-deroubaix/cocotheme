@@ -555,57 +555,55 @@ button#vscf_send {
   /* Footer */
   .clouds {
     position: absolute;
-    margin-top: .5em;
     opacity: 0.3;
-    z-index: -1;
   }
   .cloud1 {
     z-index: -1;
-    margin-top: 2em;
+    margin: 2em 10em;
     /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-    -webkit-animation: move 23s linear infinite;
-    -moz-animation: move 23s linear infinite;
-    -o-animation: move 23s linear infinite;
-    animation: move 23s linear infinite;
+    -webkit-animation: move 60s linear infinite;
+    -moz-animation: move 60s linear infinite;
+    -o-animation: move 60s linear infinite;
+    animation: move 60s linear infinite;
   }
   .cloud2 {
     z-index: -2;
-    margin-top: 5em;
-    -webkit-animation: move 26s linear infinite;
-    -moz-animation: move 26s linear infinite;
-    -o-animation: move 26 linear infinite;
-    animation: move 26s linear infinite;
+    margin: 5em 40em;
+    -webkit-animation: move 40s linear infinite;
+    -moz-animation: move 40s linear infinite;
+    -o-animation: move 40s linear infinite;
+    animation: move 40s linear infinite;
   }
   .cloud3 {
     z-index: -3;
-    margin-top: 8em;
-    -webkit-animation: move 32s linear infinite;
-    -moz-animation: move 32s linear infinite;
-    -o-animation: move 32s linear infinite;
-    animation: move 32s linear infinite;
+    margin: 8em 20em;
+    -webkit-animation: move 50s linear infinite;
+    -moz-animation: move 50s linear infinite;
+    -o-animation: move 50s linear infinite;
+    animation: move 50s linear infinite;
   }
   .cloud4 {
     z-index: -4;
-    margin-top: 3em;
-    -webkit-animation: move 29s linear infinite;
-    -moz-animation: move 29s linear infinite;
-    -o-animation: move 29s linear infinite;
-    animation: move 29s linear infinite;
+    margin: 3em 30em;
+    -webkit-animation: move 100s linear infinite;
+    -moz-animation: move 100s linear infinite;
+    -o-animation: move 100s linear infinite;
+    animation: move 100s linear infinite;
   }
   .cloud5 {
     z-index: -5;
-    margin-top: 1em;
-    -webkit-animation: move 35s linear infinite backwards;
-    -moz-animation: move 35s linear infinite backwards;
-    -o-animation: move 35s linear infinite backwards;
-    animation: move 35s linear infinite backwards;
+    margin: 1em 5em;
+    -webkit-animation: move 120s linear infinite backwards;
+    -moz-animation: move 120s linear infinite backwards;
+    -o-animation: move 120s linear infinite backwards;
+    animation: move 120s linear infinite backwards;
   }
   @-webkit-keyframes move {
     from {
-      -webkit-transform: translateX(-1000px);
+      -webkit-transform: translateX(-500px);
     }
     to {
-      -webkit-transform: translateX(3000px);
+      -webkit-transform: translateX(2000px);
     }
   }
 }
