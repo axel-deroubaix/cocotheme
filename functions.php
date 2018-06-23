@@ -310,63 +310,58 @@ function cocolo_team() {
 
 	if ( $title == "About" ) {
 		?>
-		<section id="shout" class="section" aria-label="Cocolo means heart" style="padding-top:0;">
-			<div class="col-full">
-				<h1 class="hero-title" style="text-align:center;"><?php echo __( 'Cocolo means heart', 'cocotheme' ); ?></h1>
-				<p class="hero-subtitle" style="text-align:center;"><?php _e( 'We love Japan and are 100% true to it. We only sell Japan and are based here.', 'cocotheme') ?></p>
-			</div>
-		</section>
-		<div style="background-color: #f5f5f5;">
-			<div class="col-full">
-				<section id="crew" class="team section" aria-label="Meet the team">
-					<h2 class="section-title"><?php echo __( 'The Crew — meet the team', 'cocotheme' ); ?></h2>
-
-					<div class="cocolo-columns">
-						<div class="column-content">
-							<figure class="cocolo-caption">
-								<img class="feature" src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/maki.jpg" alt="Maki" width="300" height="300" />
-								<figcaption class="cocolo-caption-text"><?php _e( 'Maki', 'cocotheme'); ?></figcaption>
-							</figure>
-						</div>
-						<div class="column-content column-speech">
-							<p class="speech"><?php _e( 'Born and raised in Tokyo, I first traveled on my own at the age of 5 when I visited my grandma’s house. She lived ona Japanese tropical island in the Pacific ocean. It was my first time flying a propeller plane. For the little girl I was, this memorable experience sparked my lifelong passion for travel and my thirst for discovery. I started backpacking from the east to the west in my 20’s and I landed in New York working as a designer. There, I later met my husband. Now, I feel so fortunate to be able share our passion for traveling and introduce my country. I since rediscovered Japan’s rich history and culture. Fresh sushi makes me happy, and strolling in the secluded gardens of Kyoto give me a great deal of inspiration.', 'cocotheme'); ?></p>
-						</div>
+		<div class="col-full">
+			<h1 class="page-title"><?php echo __( 'Cocolo means heart', 'cocotheme' ); ?></h1>
+			<p class="page-subtitle"><span><?php _e( 'We love Japan and are 100% true to it. We only sell Japan and are based here.', 'cocotheme') ?></span></p>
+		</div>
+		<div class="col-full">
+			<section id="crew" class="team section" aria-label="Meet the team">
+				<h2 class="section-title"><?php echo __( 'The Crew — meet the team', 'cocotheme' ); ?></h2>
+				<div class="columns">
+					<div class="column column-crew-photo">
+						<figure class="cocolo-caption">
+							<img class="feature" src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/maki.jpg" alt="Maki" width="300" height="300" />
+							<figcaption class="crew-name"><?php _e( 'Maki', 'cocotheme'); ?></figcaption>
+						</figure>
 					</div>
-					<div class="cocolo-columns">
-						<div class="column-content">
-							<figure class="cocolo-caption">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/aiko.jpg" alt="Aiko" width="300" height="300" />
-								<figcaption class="cocolo-caption-text"><?php _e( 'Aiko', 'cocotheme'); ?></figcaption>
-							</figure>
-						</div>
-						<div class="column-content column-speech">
-							<p class="speech"><?php _e( 'I was born and raised in Japan. After 7 years experience in banking, I’ve got a chance to live in Hong Kong, China for my husband’s work. Even though I lived there just for 2 years, it was enough time to open my eyes. The experience living abroad made me realize how unique and beautiful my home country is. I feel so blessed to work for this team and introduce Japan to the world. My favorite Japanese food is Tofu and my favorite thing to do in Japan is walking local shopping street.', 'cocotheme'); ?></p>
-						</div>
+					<div class="column column-speech">
+						<p class="speech"><?php _e( 'Born and raised in Tokyo, my first travel on my own at the age of 5 was visiting my grandma in a tropical  island by small prop plane. It was a unforgettable experience which became my source of passion for traveling and lead me keep discovering the world later in my life. By backpacking from the east to the west in my 20’s, I ended up living and working as a designer in New York where I met my husband. now I feel so fortunate to share our passion of traveling and introduce my country which I rediscovered  it’s rich history and culture. fresh Sushi makes me happy, and walking in the hidden garden of Kyoto gives me a great deal of inspiration.', 'cocotheme'); ?></p>
 					</div>
-					<div class="cocolo-columns">
-						<div class="column-content">
-							<figure class="cocolo-caption">
-								<img class="feature" src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/pierre.jpg" alt="Pierre" width="300" height="300"/>
-								<figcaption class="cocolo-caption-text"><?php _e( 'Pierre', 'cocotheme'); ?></figcaption>
-							</figure>
-						</div>
-						<div class="column-content column-speech">
-							<p class="speech"><?php _e( 'Born and raised in French Alps close to the Italian border. Being part Scottish from my Mom, I benefited from a multicultural background who make my interest about other cultures raised. After High-school I left my lovely mountains for Japan in 2004  and fell in love of this country. Thanks to my fisrt experience their I obtain a university degree of Japanese civilisation “with honor” at Lyon and Waseda university Tokyo. In 2011 I obtain a Master degree of LCE at Lyon after an internship at Tokyo. I am living in Kyoto since then. I will share with you my passion of this city and give you specific keys to understand this sophisticated and fabulous culture. My hobbies are to found interesting and undiscovered spot in Japan and share it with friends, photography, movies and food! I will gave you my favorite ramen’s spot in Kyoto ! ', 'cocotheme'); ?></p>
-						</div>
+				</div>
+				<div class="columns">
+					<div class="column column-crew-photo">
+						<figure class="cocolo-caption">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/aiko.jpg" alt="Aiko" width="300" height="300" />
+							<figcaption class="crew-name"><?php _e( 'Aiko', 'cocotheme'); ?></figcaption>
+						</figure>
 					</div>
-					<div class="cocolo-columns">
-						<div class="column-content">
-							<figure class="cocolo-caption">
-								<img class="feature" src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="Axel" width="300" height="300"/>
-								<figcaption class="cocolo-caption-text"><?php _e( 'Axel', 'cocotheme'); ?></figcaption>
-							</figure>
-						</div>
-						<div class="column-content column-speech">
-							<p class="speech"><?php _e( 'I was born and raised between France and Belgium. From age 21 I started living in Spain and later in the USA. I finally settled in Japan in 2008 where I fell in love with the country and my wife. I am lucky enough that travel, my lifelong passion, is my work. After gaining experience at several travel companies in Japan I co-founded EYExplore: an agency specialized in travel photography lessons. I am now proud to offer meaningful travel experiences at Cocolo Travel. My favourite Japanese food is Ramen (the thick soup ones). My number 1 thing to do in Japan: relaxing in an Onsen hot spring baths.', 'cocotheme'); ?></p>
-						</div>
+					<div class="column column-speech">
+						<p class="speech"><?php _e( 'I was born and raised in Japan. After 7 years experience in banking, I’ve got a chance to live in Hong Kong, China for my husband’s work. Even though I lived there just for 2 years, it was enough time to open my eyes. The experience living abroad made me realize how unique and beautiful my home country is. I feel so blessed to work for this team and introduce Japan to the world. My favorite Japanese food is Tofu and my favorite thing to do in Japan is walking local shopping street.', 'cocotheme'); ?></p>
 					</div>
-				</section>
-			</div>
+				</div>
+				<div class="columns">
+					<div class="column column-crew-photo">
+						<figure class="cocolo-caption">
+							<img class="feature" src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/pierre.jpg" alt="Pierre" width="300" height="300"/>
+							<figcaption class="crew-name"><?php _e( 'Pierre', 'cocotheme'); ?></figcaption>
+						</figure>
+					</div>
+					<div class="column column-speech">
+						<p class="speech"><?php _e( 'Born and raised in French Alps close to the Italian border. Being part Scottish from my Mom, I benefited from a multicultural background who make my interest about other cultures raised. After High-school I left my lovely mountains for Japan in 2004  and fell in love of this country. Thanks to my fisrt experience their I obtain a university degree of Japanese civilisation “with honor” at Lyon and Waseda university Tokyo. In 2011 I obtain a Master degree of LCE at Lyon after an internship at Tokyo. I am living in Kyoto since then. I will share with you my passion of this city and give you specific keys to understand this sophisticated and fabulous culture. My hobbies are to found interesting and undiscovered spot in Japan and share it with friends, photography, movies and food! I will gave you my favorite ramen’s spot in Kyoto ! ', 'cocotheme'); ?></p>
+					</div>
+				</div>
+				<div class="columns">
+					<div class="column column-crew-photo">
+						<figure class="cocolo-caption">
+							<img class="feature" src="<?php echo get_stylesheet_directory_uri(); ?>/img/staff/axel.jpg" alt="Axel" width="300" height="300"/>
+							<figcaption class="crew-name"><?php _e( 'Axel', 'cocotheme'); ?></figcaption>
+						</figure>
+					</div>
+					<div class="column column-speech">
+						<p class="speech"><?php _e( 'I was born and raised between France and Belgium. From age 21 I started living in Spain and later in the USA. I finally settled in Japan in 2008 where I fell in love with the country and my wife. I am lucky enough that travel, my lifelong passion, is my work. After gaining experience at several travel companies in Japan I co-founded EYExplore: an agency specialized in travel photography lessons. I am now proud to offer meaningful travel experiences at Cocolo Travel. My favourite Japanese food is Ramen (the thick soup ones). My number 1 thing to do in Japan: relaxing in an Onsen hot spring baths.', 'cocotheme'); ?></p>
+					</div>
+				</div>
+			</section>
 		</div>
 		<?php
 	}
@@ -383,18 +378,20 @@ function cocolo_office() {
 
 	if ( $title == "About" ) {
 		?>
-	  	<div class="col-full">
-			<section id="office" class="office section" aria-label="The office">
-				<h2 class="section-title"><?php echo __( 'Our office — Nakagin Capsule Tower', 'cocotheme' ); ?></h2>
-				<div class="cocolo-columns">
-					<div class="column-content content-office">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/nakagin-office.jpg" alt="office" width="300" />
+		<div style="background:#fff0db;">
+			<div class="col-full">
+				<section id="office" class="office section" aria-label="The office">
+					<h2 class="section-title"><?php echo __( 'Our office — Nakagin Capsule Tower', 'cocotheme' ); ?></h2>
+					<div class="columns">
+						<div class="column content-office">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/nakagin-office.jpg" alt="office" width="300" />
+						</div>
+						<div class="column content-map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3755860824626!2d139.7611710469609!3d35.667263142384435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x214d237e3bb7f649!2sNakagin+Capsule+Tower!5e0!3m2!1sen!2sjp!4v1525395592211" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
 					</div>
-					<div class="column-content content-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.3755860824626!2d139.7611710469609!3d35.667263142384435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x214d237e3bb7f649!2sNakagin+Capsule+Tower!5e0!3m2!1sen!2sjp!4v1525395592211" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 		<?php
 	}
@@ -410,85 +407,83 @@ function cocolo_company_data() {
 	$title = get_the_title($post->ID);
 
 	if ( $title == "About" ) {
-	  ?>
-		<div style="background-color: #f5f5f5;">
-			<div class="col-full">
-				<section id="data" class="data section" aria-label="Company Data">
-					<h2 class="section-title"><?php echo __( 'The facts — company data', 'cocotheme' ); ?></h2>
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									<p><?php _e( 'Corporate name', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( 'Cocolo Travel Llc.', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Purpose', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p>
-										<?php _e( 'Consulting and booking for travel agencies', 'cocotheme'); ?><br>
-										<?php _e( 'Travel related staff training', 'cocotheme'); ?><br>
-										<?php _e( 'All other activities incidental or related to each of the above', 'cocotheme'); ?>
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Head office', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( 'Nakagin Capsule Tower, 8-16-10 Ginza Chuo Tokyo, 104-0061 Japan', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Founded', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( 'February 28, 2017', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Capital', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( 'JPY 3,000,000', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Staff', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( '3 full-time, 1 part-time', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Board members', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( 'Axel Deroubaix, Maki Deroubaix', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p><?php _e( 'Travel agency licence', 'cocotheme'); ?></p>
-								</td>
-								<td>
-									<p><?php _e( '20071', 'cocotheme'); ?></p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-			</div>
+		?>
+		<div class="col-full">
+			<section id="data" class="data section" aria-label="Company Data">
+				<h2 class="section-title"><?php echo __( 'The facts — company data', 'cocotheme' ); ?></h2>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<p><?php _e( 'Corporate name', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( 'Cocolo Travel Llc.', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Purpose', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p>
+									<?php _e( 'Consulting and booking for travel agencies', 'cocotheme'); ?><br>
+									<?php _e( 'Travel related staff training', 'cocotheme'); ?><br>
+									<?php _e( 'All other activities incidental or related to each of the above', 'cocotheme'); ?>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Head office', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( 'Nakagin Capsule Tower, 8-16-10 Ginza Chuo Tokyo, 104-0061 Japan', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Founded', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( 'February 28, 2017', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Capital', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( 'JPY 3,000,000', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Staff', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( '3 full-time, 1 part-time', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Board members', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( 'Axel Deroubaix, Maki Deroubaix', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><?php _e( 'Travel agency licence', 'cocotheme'); ?></p>
+							</td>
+							<td>
+								<p><?php _e( '20071', 'cocotheme'); ?></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
 		</div>
 		<?php
 	}
@@ -560,50 +555,49 @@ function cocolo_why() {
 	if ( $title == "Why" ) {
 		?>
 		<div id="reasons" role="complementary">
-			<section class="section" aria-label="Why travel with Cocolo?" style="padding-top:0;">
+
+			<div class="col-full">
+				<h1 class="page-title"><?php echo __( 'Original experiences in Japan', 'cocotheme' ); ?></h1>
+				<p class="page-subtitle"><span><?php _e( 'Curated, non-mass-market travel experiences in Japan', 'cocotheme') ?></span></p>
+			</div>
+
+			<section aria-label="Reasons" class="section">
 				<div class="col-full">
-					<h1 class="hero-title" style="text-align:center;"><?php echo __( 'Original experiences in Japan', 'cocotheme' ); ?></h1>
-					<p class="hero-subtitle" style="text-align:center;"><?php _e( 'Curated, non-mass-market travel experiences in Japan', 'cocotheme') ?></p>
-				</div>
-			</section>
-			<section aria-label="Reasons">
-				<div class="reasons off-color">
-					<div class="col-full">
-						<span class="reason-right">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why1.svg" alt="why1" style="float:right;">
-						</span>
-						<span class="reason-left">
+					<div class="columns">
+						<div class="column column-image">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why1.svg" alt="why1" />
+						</div>
+
+						<div class="column column-text">
 							<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Slow travel — No tourist burnout', 'cocotheme'); ?></h2>
 							<p><?php _e( 'Have you ever come home from a vacation feeling more exhausted than you were before you left? Have you ever felt like you had no time to get to know the area enough?', 'cocotheme'); ?></p>
 							<p><?php _e( 'We take a slow approach to travel and favor quality time over quantity of places visited. Take time to discover Japan with us.', 'cocotheme'); ?></p>
 							<blockquote><?php _e( '"All traveling becomes dull in exact proportion to its rapidity." ―John Ruskin', 'cocotheme'); ?></blockquote>
-						</span>
+						</div>
 					</div>
-				</div>
-				<div class="reasons">
-					<div class="col-full">
-						<span class="reason-left">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why2.svg" alt="why2">
-						</span>
-						<span class="reason-right">
+
+					<div class="columns">
+						<div class="column column-image">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why2.svg" alt="why2" />
+						</div>
+						<div class="column column-text">
 							<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'Curated — No planning headache', 'cocotheme'); ?></h2>
-							<p><?php _e( 'Are you overwhelmed by the abundance of choice? Not sure what is worth your time?', 'cocotheme'); ?></p>
+							<p><?php _e( 'Are you overwhelmed by the abundance of choice? Not sure what is worth your time', 'cocotheme'); ?></p>
 							<p><?php _e( 'We make it easy for you selecting only the experiences in Japan that match our standards: exclusive, memorable and elegant', 'cocotheme'); ?></p>
 							<blockquote><?php _e( '"All journeys have secret destination of which the traveler is unaware." ―Martin Buber ', 'cocotheme'); ?></blockquote>
-						</span>
+						</div>
 					</div>
-				</div>
-				<div class="reasons off-color">
-					<div class="col-full">
-						<span class="reason-right">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why3.svg" alt="why3" style="float:right;">
-						</span>
-						<span class="reason-left">
+
+					<div class="columns">
+						<div class="column column-image">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/why3.svg" alt="why3" />
+						</div>
+						<div class="column column-text">
 							<h2 style="font-family: 'Playfair Display', serif;font-weight: 600;"><?php _e( 'People centered — Meet new friends', 'cocotheme'); ?></h2>
 							<p><?php _e( 'Have you ever stayed somewhere yet never connected with the people around? Do you want a deeper meaning to your travel than just ticking a places-to-go list?', 'cocotheme'); ?></p>
 							<p><?php _e( 'We\'ve got you covered! Human interaction is at the center of our selection process.' , 'cocotheme'); ?></p>
 							<blockquote><?php _e( '"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes" ―Marcel Proust', 'cocotheme'); ?></blockquote>
-						</span>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -625,8 +619,8 @@ function cocolo_booknow() {
 		?>
 		<div id="booknow" role="complementary">
 			<section class="booknow col-full" style="padding:5em 0 3em 0;text-align:center;color:#ffffff;" aria-label="Book now">
-				<p class="hero-subtitle">
-				<a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><?php _e( 'Book now', 'eyetheme') ?></a>
+				<p class="book-now">
+					<a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><?php _e( 'Book now', 'eyetheme') ?></a>
 				</p>
 			</section>
 		</div>

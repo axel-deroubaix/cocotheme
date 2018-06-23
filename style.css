@@ -75,6 +75,83 @@ h2.woocommerce-loop-product__title {
   color: #ea5506;
 }
 
+.section-title {
+  font-family: 'Playfair Display', serif;
+  text-align: left !important;
+  font-weight: 600;
+  font-size: 2em;
+  text-transform: capitalize;
+}
+
+.section-title:before {
+	content: "§";
+	display: inline-block;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	opacity: 0.2;
+	margin: 0 0.6em;
+}
+
+.page-title {
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-size: 4em;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
+.page-subtitle {
+	text-align: center;
+	line-height: 0.2em;
+	font-size: 1.5em;
+}
+
+.page-subtitle span {
+  display: inline-block;
+  position: relative;
+}
+
+.page-subtitle span:before,
+.page-subtitle span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #d8cccc;
+  border-top: 1px solid #d8cccc;
+  top: 0;
+  width: 600px;
+}
+.page-subtitle span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.page-subtitle span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.book-now {
+	text-transform: capitalize;
+	font-size: 2em;
+}
+
+/* Columns */
+
+.columns {
+    display: inline-block;
+}
+
+.column {
+    display: inline-block;
+	overflow: visible;
+	position: relative;
+    margin: 1em 1%;
+	vertical-align: middle;
+}
+
 /* Tables */
 
 table {
@@ -322,20 +399,8 @@ button.start-booking-button {
   border-radius: 50%;
 }
 
-.cocolo-columns {
-    display: inline-block;
-}
-
-.column-content {
-    display: inline-block;
-	overflow: visible;
-	position: relative;
-    margin: 1em 1%;
-	vertical-align: middle;
-}
-
-.cocolo-caption-text {
-    background-color: #f5f5f5;
+.crew-name {
+    background-color: #fff;
     border-radius: 3px;
     color: #222;
     font-size: 1em;
@@ -345,7 +410,6 @@ button.start-booking-button {
     left: -.5em;
     bottom: 30%;
     transform: rotate(-3deg);
-    transition: all .1s ease-in-out;
 }
 
 .speech {
@@ -412,14 +476,6 @@ button.start-booking-button {
 }
 
 /* Homepage */
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  text-align: left !important;
-  font-weight: 600;
-  font-size: 2em;
-  text-transform: capitalize;
-}
 
 .dgwt-wcas-search-wrapp {
   z-index: 2;
@@ -571,17 +627,8 @@ button#vscf_send {
     width: 100%;
   }
   /* Why page */
-  .reasons {
-    padding:5em 0;
-  }
-  .reason-right {
-    width: 50%;
-    float: right;
-  }
-  .reason-left {
-    width: 50%;
-    float: left;
-  }
+
+
   /* Contact form */
   #contact-area {
     width: 55%;
@@ -640,8 +687,12 @@ button#vscf_send {
       -webkit-transform: translateX(2000px);
     }
   }
+
   /* Team */
-	.column-content {
+	.columns:nth-of-type(even) {
+		direction: rtl;
+	}
+	.column-crew-photo {
 		max-width: 22%;
 	}
 	.column-speech {
@@ -667,6 +718,14 @@ button#vscf_send {
 	}
 	.content-map {
 		max-width: 63%;
+	}
+
+	/* Why page */
+	.column-image {
+		width: 40%;
+	}
+	.column-text {
+		width: 55%;
 	}
 }
 
