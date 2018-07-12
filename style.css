@@ -46,6 +46,10 @@ p a {
   border-bottom: 2px solid #ea5506;
 }
 
+p.stars a {
+  border: none;
+}
+
 p a:hover {
   border-bottom-color: #999;
   color: #999;
@@ -84,7 +88,7 @@ h2.woocommerce-loop-product__title {
 }
 
 .section-title:before {
-	content: "§";
+	content: "ยง";
 	display: inline-block;
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
@@ -253,6 +257,7 @@ span.product-location {
   padding: .2em 1em;
   border-bottom-left-radius: 1em;
   font-variant: small-caps;
+  font-weight: bold;
 }
 
 /* Products */
