@@ -37,6 +37,10 @@ body, button, input, textarea {
   letter-spacing: 0.02em;
 }
 
+.woocommerce-tabs .panel h2:first-of-type {
+  font-size: 2em;
+}
+
 a {
   color: #ea5506;
 }
