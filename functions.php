@@ -478,7 +478,7 @@ function cocolo_company_data() {
 								<p><?php _e( 'Travel agency licence', 'cocotheme'); ?></p>
 							</td>
 							<td>
-								<p><?php _e( '20071', 'cocotheme'); ?></p>
+								<p><?php _e( 'The Governor of Tokyo Registered Travel Agent No. 3-7597', 'cocotheme'); ?></p>
 							</td>
 						</tr>
 					</tbody>
